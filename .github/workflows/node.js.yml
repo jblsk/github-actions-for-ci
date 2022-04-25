@@ -3,6 +3,7 @@ name: Node.js CI
 on: [push]
 
 jobs:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,7 +15,6 @@ jobs:
       - uses: actions/upload-artifact@master
         name: webpack artifacts
         path: public/
-
   test:
     needs: build
     runs-on: ubuntu-latest
